@@ -9,7 +9,7 @@
 		var currentBuzzObject = null;
 		/**
 			@function setSong
-			@desc Stopes currently playing song and loads new audio file as currentBuzzObject
+			@desc Stops currently playing song and loads new audio file as currentBuzzObject
 			@param {object} song
 		*/
 		var setSong = function(song) {
@@ -29,14 +29,25 @@
 			});
 			currentSong = song;
 		};
+		/** 
+			@function playSong
+			@desc plays a song when a play button is clicked
+			@param {object} song
+		*/
+		var playSong = function(song){
+			currentBuzzObject.play();
+			song.playing = true;
+		};
+		
+		
 		
 		SongPlayer.play = function(song){
 			if(currentSong !== song){
 				
 			setSong(song);
+			playSong(song);
 				
-			currentBuzzObject.play();
-			song.playing = true;
+			
 				
 			}
 		};

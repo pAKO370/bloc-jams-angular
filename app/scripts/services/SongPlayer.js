@@ -124,6 +124,12 @@
 			}
 		};
 		
+		SongPlayer.volume = 10;
+			
+		SongPlayer.setVolume = function(volume){
+			currentBuzzObject.setVolume(volume);
+		};
+		
 		return SongPlayer;
 	}
 	

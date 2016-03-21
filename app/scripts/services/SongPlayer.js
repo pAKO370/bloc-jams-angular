@@ -124,10 +124,12 @@
 			}
 		};
 		
-		SongPlayer.volume = 10;
+		SongPlayer.volume = null;
 			
 		SongPlayer.setVolume = function(volume){
+			if (currentBuzzObject !== null) {
 			currentBuzzObject.setVolume(volume);
+			}
 		};
 		
 		return SongPlayer;

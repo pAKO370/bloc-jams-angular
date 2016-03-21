@@ -50,9 +50,7 @@
 				};
 					
 				var notifyOnChange = function(newValue) {
-						console.log('before if');
 						if (typeof scope.onChange === 'function') {
-							console.log('after if');
 							scope.onChange({value: newValue});
 						}
 					};
@@ -64,6 +62,7 @@
 							notifyOnChange(scope.value);
 						});
 					});
+				
 				
 					
 					$document.bind('mouseup.thumb', function(){
